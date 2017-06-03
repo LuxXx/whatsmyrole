@@ -1,0 +1,34 @@
+package whatsmyrole;
+
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+
+@XmlRootElement
+public class Champion {
+	private String name;
+
+	public Champion() {}
+	
+	public Champion(String name) {
+		this.name = name.toLowerCase();
+	}
+	
+	public String getName() {
+		return name;
+	}
+	
+	@XmlElement
+	public void setName(String name) {
+		this.name = name;
+	}
+	
+	@Override
+	public boolean equals(Object obj) {
+		if (!(obj instanceof Champion)) return false;
+		return name.equals(((Champion) obj).name);
+	}
+	@Override
+	public String toString() {
+		return name;
+	}
+}
