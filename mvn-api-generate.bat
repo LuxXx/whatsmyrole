@@ -1,0 +1,1 @@
+mvn archetype:generate -DarchetypeArtifactId=jersey-quickstart-grizzly2 -DarchetypeGroupId=org.glassfish.jersey.archetypes -DinteractiveMode=false -DgroupId=league -DartifactId=whatsmyrole -Dpackage=whatsmyrole -DarchetypeVersion=2.25
