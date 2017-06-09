@@ -20,6 +20,10 @@ public class Main {
      * @return Grizzly HTTP server.
      */
     public static HttpServer startServer() {
+    	
+    	LaneData.init();
+    	System.out.println("Data initialized");
+    	
         // create a resource config that scans for JAX-RS resources and providers
         // in whatsmyrole package
         final ResourceConfig rc = new ResourceConfig().packages("whatsmyrole");
@@ -35,9 +39,6 @@ public class Main {
      * @throws IOException
      */
     public static void main(String[] args) throws IOException {
-    	
-    	LaneData.init();
-    	System.out.println("Data initialized");
     	
         final HttpServer server = startServer();
         System.out.println(String.format("Jersey app started with WADL available at "

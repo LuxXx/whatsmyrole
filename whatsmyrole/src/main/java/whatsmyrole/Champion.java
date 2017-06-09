@@ -10,7 +10,7 @@ public class Champion {
 	public Champion() {}
 	
 	public Champion(String name) {
-		this.name = name.toLowerCase();
+		setName(name);
 	}
 	
 	public String getName() {
@@ -19,7 +19,7 @@ public class Champion {
 	
 	@XmlElement
 	public void setName(String name) {
-		this.name = name;
+		this.name = name.toLowerCase().replace("'", "").replace(".", "");
 	}
 	
 	@Override
