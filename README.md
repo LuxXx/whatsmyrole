@@ -1,6 +1,8 @@
 # whatsmyrole
 A simple REST API for 'League Of Legends' that tells you what lane you prefer based on your champion pool
 
+API URL: http://localhost:8080/role
+
 The Example Request
 ```
 [{"name": "Teemo"}]
